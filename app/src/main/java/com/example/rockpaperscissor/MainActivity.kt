@@ -39,8 +39,11 @@ fun Greeting(name: String, modifier: Modifier = Modifier) {
 
 @Preview(showBackground = true)
 @Composable
-fun GreetingPreview() {
-    RockPaperScissorTheme {
-        Greeting("Android")
-    }
+fun StartGame() {
+
+    println("ROCK, PAPER OR SCISSOR?")
+    println("Enter your choice: ")
+
+    val playerMove = readln().uppercase()
+    println(RockPaperScissorsLogic.playGame(playerMove, RockPaperScissorsLogic.getRandomMove()))
 }
